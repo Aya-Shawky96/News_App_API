@@ -13,7 +13,7 @@ class NewsPage extends StatelessWidget {
       appBar: AppBar(
         title: Text(
           "News",
-          style: TextStyle(color: Colors.red),
+          style: TextStyle(color: Colors.green),
         ),
         centerTitle: true,
       ),
