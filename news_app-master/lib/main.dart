@@ -16,11 +16,7 @@ class MyApp extends StatelessWidget {
       create: (context) => NewsProvider(),
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
-        title: 'Flutter Demo',
-        theme: ThemeData(
-          colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-          useMaterial3: true,
-        ),
+       // title: 'Flutter Demo',
         home: const NewsPage(),
       ),
     );

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-
 import '../providers/news_provider.dart';
 import '../widgets/news_item.dart';
 
@@ -13,7 +12,7 @@ class NewsPage extends StatelessWidget {
       appBar: AppBar(
         title: Text(
           "News",
-          style: TextStyle(color: Colors.red),
+          style: TextStyle(color: const Color.fromARGB(255, 134, 124, 14), fontWeight: FontWeight.bold,fontSize: 40),
         ),
         centerTitle: true,
       ),
@@ -26,15 +25,16 @@ class NewsPage extends StatelessWidget {
           );
         } else {
           return ListView.separated(
+            itemCount: newsModel.news.length,
             itemBuilder: (context, index) => NewsItem(
               image: newsModel.news[index]["urlToImage"],
               title: newsModel.news[index]["title"],
               description: newsModel.news[index]["description"],
+              content: newsModel.news[index]["content"], // Pass the content
             ),
             separatorBuilder: (context, index) => const SizedBox(
               height: 10,
             ),
-            itemCount: newsModel.news.length,
           );
         }
       }),
